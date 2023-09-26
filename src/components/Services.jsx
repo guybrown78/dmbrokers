@@ -30,7 +30,7 @@ const features = [
   {
     name: 'Business Insurance',
     description:
-      'As a leading insurance broker, DM Brokers specialises in providing comprehensive business insurance services to protect your company’s assets, operations, and employees',
+      'As a independent insurance broker, DM Brokers specialises in providing comprehensive business insurance services to protect your company’s assets, operations, and employees',
     icon: BusinessIcon,
     screen: BusinessScreen,
   },
@@ -171,7 +171,7 @@ function IndividualScreen({ custom, animated = false }) {
 			<div className="px-4 py-0">
           <div className="space-6 flex flex-wrap">
             {[
-              { label: 'High Net Worth Motor & Home', value: 'High Net Worth Motor & Home' },
+              { label: 'High Net Worth Home & Motor', value: 'High Net Worth Home & Motor' },
 							{ label: 'Home Insurance', value: 'Home Insurance' },
 							{ label: 'Holiday Home Insurance', value: 'Holiday Home Insurance' },
 							{ label: 'Classic Car', value: 'Classic Car' },
@@ -397,7 +397,7 @@ export function Services() {
 						Comprehensive Insurance Solutions for Businesses and Individuals
           </h2>
           <p className="mt-2 text-lg text-gray-400">
-						At DM Brokers, we specialise in providing comprehensive insurance solutions for businesses and individuals. With our expertise in the insurance industry, we offer a wide range of insurance services to meet the unique needs of our clients.
+						At DM Brokers, we specialise in providing comprehensive insurance solutions for businesses and individuals. With our expertise in the insurance industry, we offer a wide range of insurance services to meet the needs of our clients.
           </p>
         </div>
       </Container>

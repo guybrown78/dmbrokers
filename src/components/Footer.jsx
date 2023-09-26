@@ -57,7 +57,7 @@ export function Footer() {
             </nav>
           </div>
 					
-						<a href="tel:+447828068290" className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
+						<a href="tel:+441606636201" className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
 								<div className="relative flex h-12 w-12 flex-none items-center justify-center">
 									<CallOut className="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-dmGreen" />
 								</div>
@@ -67,7 +67,7 @@ export function Footer() {
 											Call
 										</p>
 										<p className="mt-1 text-sm text-gray-700">
-											+44 7828 068290
+											+44 1606 636 201
 										</p>
 								</div>
 						</a>

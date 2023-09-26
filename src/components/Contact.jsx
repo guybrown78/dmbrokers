@@ -8,14 +8,14 @@ const plans = [
   {
     name: 'Telephone',
     price: { Monthly: '$0', Annually: '$0' },
-		detail: '+(44) 7828 068290',
+		detail: '+(44) 01606 636 201',
     description:
       'Our experienced team are ready to assist you with your insurance needs',
   },
   {
     name: 'Email',
     price: { Monthly: '$7', Annually: '$70' },
-		detail:"margaret@dmbrokers.co.uk",
+		detail:"dm@dmbrokers.co.uk",
     description:
       'We’ll reply as soon as possible, addressing your inquiry',
   },

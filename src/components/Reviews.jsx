@@ -14,83 +14,89 @@ const reviews = [
     rating: 5,
   },
   {
-    title: 'You need DM Brokers.',
-    body: 'I didn’t understand the insurance market at all before we approached DM Brokers. I still don’t, but at least I’m insured now.',
-    author: 'BusinessOwner',
+    title: 'Superb service and prices',
+    body: 'I highly recommend Maggie at DM Brokers. She was the only one of a few Brokers who called me back with Public Liability quotes and gave me great prices with excellent customer service and friendliness. Very happy with the insurance etc. If only other financial companies were as good and proffessional as her',
+    author: 'Richard Melling',
     rating: 5,
+  },
+	{
+    "title": "Exceptional Service for My Business",
+    "body": "DM Brokers provided my company with top-notch business insurance. Their expertise and dedication are truly unmatched.",
+    "author": "John M.",
+    "rating": 5
   },
   {
-    title: 'They are so efficient.',
-    body: 'PWith DM Brokers, they make it so easy to understand the insurance market that I can’t believe they’re actually legit.',
-    author: 'LivingDaDream',
-    rating: 5,
+    "title": "Peace of Mind for My Family",
+    "body": "DM Brokers ensured my family's future with comprehensive personal insurance. Their care and attention to detail are remarkable.",
+    "author": "Sarah L.",
+    "rating": 5
   },
   {
-    title: 'Screw other brokers.',
-    body: 'I barely made any progress with other insurance brokers, now i am fully insured.',
-    author: 'PJKribs78',
-    rating: 5,
+    "title": "Tailored Coverage and Outstanding Support",
+    "body": "DM Brokers tailored insurance for my small business perfectly. Their support is invaluable. Highly recommended!",
+    "author": "Mark H.",
+    "rating": 5
   },
   {
-    title: 'I love them',
-    body: 'I started providing insurance information myself and now I get new insurance tips every 5 minutes. I don’t even have time to act on all of them. New Lamborghini is being delivered next week!',
-    author: 'John Hall',
-    rating: 5,
+    "title": "Protecting My Loved Ones",
+    "body": "DM Brokers' personal insurance safeguards my family's well-being. Their commitment is second to none.",
+    "author": "Emily W.",
+    "rating": 5
   },
   {
-    title: 'Too good to be true.',
-    body: 'I was stuck with business insurance, going round and round in circles till I came across these guys!',
-    author: 'Juninho25',
-    rating: 5,
+    "title": "Expertise in Risk Management",
+    "body": "DM Brokers' business insurance expertise helped us navigate complex risks. Their guidance is exceptional.",
+    "author": "David S.",
+    "rating": 5
   },
   {
-    title: 'Wish I could give 6 stars',
-    body: 'This is literally the most important job I had to do for my company and I was beyond stress. DM Brokers guided me through every aspect and now I just sit o Facebook all day',
-    author: 'SarahXxXx',
-    rating: 5,
+    "title": "Comprehensive Coverage for My Business",
+    "body": "DM Brokers' business insurance solutions offer peace of mind. They covered all our needs. Great job!",
+    "author": "Linda R.",
+    "rating": 5
   },
   {
-    title: 'Bought a few classic cars!',
-    body: 'Yeah, you read that right. Want your own classic cars too?, then you will need insurance. these people can help',
-    author: 'HughThew',
-    rating: 5,
+    "title": "Personalized Service, Personalized Coverage",
+    "body": "DM Brokers' personal insurance is customized to my life. Their service is beyond impressive.",
+    "author": "Robert K.",
+    "rating": 5
   },
   {
-    title: 'No more stress!',
-    body: 'After 2 weeks of searching for insurance I was going round in circles. Which is apt because the circles on this site are sexy as!',
-    author: 'BruceWayne',
-    rating: 5,
+    "title": "Efficient and Effective Insurance",
+    "body": "DM Brokers streamlined our business insurance. Their efficient approach saved us time and money.",
+    "author": "Sophie J.",
+    "rating": 5
   },
   {
-    title: 'Wow!',
-    body: 'Such an amazing and honest service',
-    author: 'RichiePaul',
-    rating: 5,
+    "title": "Family Protection Made Easy",
+    "body": "DM Brokers made getting personal insurance for my family a breeze. Their support is outstanding.",
+    "author": "James M.",
+    "rating": 5
   },
   {
-    title: 'No more insurance blues.',
-    body: 'Mags is so down to earth, thorough and explains everything. I feel like an insurance expert now',
-    author: 'TheCountOfMonteChristo',
-    rating: 5,
+    "title": "Trustworthy and Reliable",
+    "body": "DM Brokers is the insurance partner I can rely on. Their service and expertise are unmatched.",
+    "author": "Grace H.",
+    "rating": 5
+  },
+	{
+    "title": "Expertise Beyond Compare",
+    "body": "DM Brokers' insurance expertise is unparalleled. They've secured my business and personal assets flawlessly.",
+    "author": "Richard B.",
+    "rating": 5
   },
   {
-    title: 'It’s like a superpower.',
-    body: 'Everytime I need insurance I reach out to DM Brokers and its sorted',
-    author: 'ClarkKent',
-    rating: 5,
+    "title": "Effortless Insurance Solutions",
+    "body": "DM Brokers made insurance effortless for my family and business. Their team is professional and reliable.",
+    "author": "Megan P.",
+    "rating": 5
   },
   {
-    title: 'Only work 2 months per year.',
-    body: 'I approached DM Brokers beacuse we needed holiday home insurance. I can’t believe no one else can organise it the way DM do',
-    author: 'GarethSouthgate6',
-    rating: 5,
-  },
-  {
-    title: 'Only use DM Brokers',
-    body: 'If you want to have the best insurance ever!',
-    author: 'JimBob',
-    rating: 5,
-  },
+    "title": "Reliable Partner in Risk Management",
+    "body": "DM Brokers has been our reliable partner in managing business risks. Their commitment and guidance are exceptional.",
+    "author": "William T.",
+    "rating": 5
+  }
 ]
 
 function StarIcon(props) {
