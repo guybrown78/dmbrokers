@@ -31,3 +31,14 @@ export function SelectField({ id, label, className, ...props }) {
     </div>
   )
 }
+
+export function TextAreaField({ id, label, className = '', rows = 4, ...props}){
+	return (
+		<div className={className}>
+      {label && <Label id={id}>{label}</Label>}
+      <textarea
+        id={id} rows={rows} {...props} className={formClasses}
+      />
+    </div>
+	)
+}
