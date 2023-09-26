@@ -27,19 +27,19 @@ const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
+	{
+    name: 'Personal Insurance',
+    description:
+      'We understand that protecting your personal assets and loved ones is a top priority. That’s why we offer a wide range of private insurance services to provide you with comprehensive coverage and peace of mind.',
+    icon: IndividualIcon,
+    screen: IndividualScreen,
+  },
   {
     name: 'Business Insurance',
     description:
       'As a independent insurance broker, DM Brokers specialises in providing comprehensive business insurance services to protect your company’s assets, operations, and employees',
     icon: BusinessIcon,
     screen: BusinessScreen,
-  },
-  {
-    name: 'Personal Insurance',
-    description:
-      'We understand that protecting your personal assets and loved ones is a top priority. That’s why we offer a wide range of private insurance services to provide you with comprehensive coverage and peace of mind.',
-    icon: IndividualIcon,
-    screen: IndividualScreen,
   }
 ]
 
