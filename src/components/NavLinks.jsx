@@ -3,21 +3,26 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
+import { usePathname, useRouter } from 'next/navigation'
 
 export function NavLinks() {
   let [hoveredIndex, setHoveredIndex] = useState(null)
 
+	const router = useRouter();
+	const pathname = usePathname();
+
 	const handleAnchor = (event, href) => {
-	// 	event.preventDefault();
-	// 	if(pathname === "/"){
+		event.preventDefault();
+		console.log(pathname)
+		if(pathname === "/"){
 			if (href.includes("#")) {
 				event.preventDefault();
 				window.location.hash = ''
 				window.location.hash = href
 			}
-		// }else{
-		// 	router.push(`../${href}`)
-		// }
+		}else{
+			router.push(`../${href}`)
+		}
 	}
 
   return [

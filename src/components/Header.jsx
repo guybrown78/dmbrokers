@@ -8,6 +8,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
+import { usePathname, useRouter } from 'next/navigation'
 
 function MenuIcon(props) {
   return (
@@ -36,11 +37,17 @@ function ChevronUpIcon(props) {
 }
 
 function MobileNavLink({ href, children }, ...props) {
+	const router = useRouter();
+	const pathname = usePathname();
 
 	const handleAnchor = (event) => {
-		if (href.includes("#")) {
-			window.location.hash = ''
-			window.location.hash = href
+		if(pathname === "/"){
+			if (href.includes("#")) {
+				window.location.hash = ''
+				window.location.hash = href
+			}
+		}else{
+			router.push(`../${href}`)
 		}
 	}
 
@@ -55,11 +62,16 @@ function MobileNavLink({ href, children }, ...props) {
   )
 }
 function MobileNavButton({ href, children }, ...props) {
-
+	const router = useRouter();
+	const pathname = usePathname();
 	const handleAnchor = (event) => {
-		if (href.includes("#")) {
-			window.location.hash = ''
-			window.location.hash = href
+		if(pathname === "/"){
+			if (href.includes("#")) {
+				window.location.hash = ''
+				window.location.hash = href
+			}
+		}else{
+			router.push(`../${href}`)
 		}
 	}
 
@@ -76,11 +88,18 @@ function MobileNavButton({ href, children }, ...props) {
 
 export function Header() {
 
+	const router = useRouter();
+	const pathname = usePathname();
 	const handleAnchor = (event, href) => {
-		if (href.includes("#")) {
-			event.preventDefault();
-			window.location.hash = ''
-			window.location.hash = href
+		event.preventDefault();
+		if(pathname === "/"){
+			if (href.includes("#")) {
+				// event.preventDefault();
+				window.location.hash = ''
+				window.location.hash = href
+			}
+		}else{
+			router.push(`../${href}`)
 		}
 	}
   return (
