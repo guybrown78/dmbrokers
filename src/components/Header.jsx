@@ -35,11 +35,38 @@ function ChevronUpIcon(props) {
   )
 }
 
-function MobileNavLink({ children, ...props }) {
+function MobileNavLink({ href, children }, ...props) {
+
+	const handleAnchor = (event) => {
+		if (href.includes("#")) {
+			window.location.hash = ''
+			window.location.hash = href
+		}
+	}
+
   return (
     <Popover.Button
-      as={Link}
+			onClick={(e) => handleAnchor(e)}
       className="block text-base leading-7 tracking-tight text-gray-700"
+      {...props}
+    >
+      {children}
+    </Popover.Button>
+  )
+}
+function MobileNavButton({ href, children }, ...props) {
+
+	const handleAnchor = (event) => {
+		if (href.includes("#")) {
+			window.location.hash = ''
+			window.location.hash = href
+		}
+	}
+
+  return (
+    <Popover.Button
+			onClick={(e) => handleAnchor(e)}
+      className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors bg-dmDark text-dmLight hover:bg-dmDark-darker active:bg-dmDark-lighter active:dmDark-lighter"
       {...props}
     >
       {children}
@@ -48,6 +75,14 @@ function MobileNavLink({ children, ...props }) {
 }
 
 export function Header() {
+
+	const handleAnchor = (event, href) => {
+		if (href.includes("#")) {
+			event.preventDefault();
+			window.location.hash = ''
+			window.location.hash = href
+		}
+	}
   return (
     <header>
       <nav>
@@ -100,22 +135,28 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#features">
+                            <MobileNavLink href="#services">
                               Services
                             </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
+                            <MobileNavLink href="#about">
                               About
                             </MobileNavLink>
-														<MobileNavLink href="/#reviews">
+														<MobileNavLink href="#reviews">
                               Reviews
                             </MobileNavLink>
-                            <MobileNavLink href="/#contact">Contact</MobileNavLink>
+                            <MobileNavLink href="#contact">Contact</MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            <Button href="#" variant="outline">
-                              Call	
-                            </Button>
-                            <Button href="/#message">Message</Button>
+													<a 
+															href="tel:+447828068290" 
+															variant="outline" 
+															className="inline-flex justify-center rounded-lg border py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm outline-2 outline-offset-2 transition-colors border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80"
+														>
+															Call
+														</a> 
+                            <MobileNavButton href="#message">
+															Message
+														</MobileNavButton>
                           </div>
                         </Popover.Panel>
                       </>
@@ -124,10 +165,18 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/#" variant="outline" className="hidden lg:block">
+            <a 
+							href="tel:+447828068290" 
+							variant="outline" 
+							className="hidden lg:inline-flex justify-center rounded-lg border py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm outline-2 outline-offset-2 transition-colors border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80"
+						>
               Call
-            </Button> 
-            <Button href="/#message" className="hidden lg:block">
+            </a> 
+            <Button 
+							href="#message" 
+							onClick={(e) => handleAnchor(e, '#message')}
+							className="hidden lg:block"
+						>
               Message
             </Button>
           </div>

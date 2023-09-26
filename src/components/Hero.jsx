@@ -1,22 +1,12 @@
-import { useId } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
+'use client'
 
-import { AppDemo } from '@/components/AppDemo'
-import { AppStoreLink } from '@/components/AppStoreLink'
+import { useId } from 'react'
+
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { PhoneFrame } from '@/components/PhoneFrame'
 import { HeroFrame } from '@/components/HeroFrame'
 import { HeroLoop } from '@/components/HeroLoop'
-import logoBbc from '@/images/logos/bbc.svg'
-import logoCbs from '@/images/logos/cbs.svg'
-import logoCnn from '@/images/logos/cnn.svg'
-import logoFastCompany from '@/images/logos/fast-company.svg'
-import logoForbes from '@/images/logos/forbes.svg'
-import logoHuffpost from '@/images/logos/huffpost.svg'
-import logoTechcrunch from '@/images/logos/techcrunch.svg'
-import logoWired from '@/images/logos/wired.svg'
+
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -101,6 +91,15 @@ function PlayIcon(props) {
 }
 
 export function Hero() {
+
+
+	const handleAnchor = (event, href) => {
+		if (href.includes("#")) {
+			event.preventDefault();
+			window.location.hash = ''
+			window.location.hash = href
+		}
+	}
   return (
     <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container>
@@ -115,12 +114,14 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               {/* <AppStoreLink /> */}
 							<Button
-                href="/#services"
+                href="#services"
+								onClick={(e) => handleAnchor(e, '#services')} 
               >
                 Services
               </Button>
               <Button
-                href="/#about"
+                href="#about"
+								onClick={(e) => handleAnchor(e, '#about')} 
                 variant="outline"
               >
 								Find out more

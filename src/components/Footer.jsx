@@ -1,3 +1,4 @@
+'use client'
 // import Image from 'next/image'
 import Link from 'next/link'
 
@@ -28,6 +29,17 @@ function CallOut(props){
 	)
 }
 export function Footer() {
+
+
+	const handleAnchor = (event, href) => {
+		if (href.includes("#")) {
+			event.preventDefault();
+			window.location.hash = ''
+			window.location.hash = href
+		}
+	}
+
+
   return (
     <footer className="border-t border-gray-200">
       <Container>
@@ -71,7 +83,12 @@ export function Footer() {
               required
               className="w-60 min-w-0 shrink"
             /> */}
-            <Button href="/#message" type="submit" color="gray" className="ml-4 flex-none">
+            <Button 
+							href="#message" 
+							onClick={(e) => handleAnchor(e, '#message')} 
+							color="gray" 
+							className="ml-4 flex-none"
+						>
               <span className="hidden lg:inline">Message us</span>
               <span className="lg:hidden">Message</span>
             </Button>
