@@ -44,23 +44,22 @@ export function Footer() {
               <NavLinks />
             </nav>
           </div>
-          <div className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
-            <div className="relative flex h-12 w-12 flex-none items-center justify-center">
-              <CallOut className="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-dmGreen" />
-              {/* <Image src={qrCode} alt="" unoptimized /> */}
-            </div>
-            <div className="ml-8 lg:w-64">
-              <p className="text-base font-semibold text-gray-900">
-                <Link href="#">
-                  <span className="absolute inset-0 sm:rounded-2xl" />
-                  Call
-                </Link>
-              </p>
-              <p className="mt-1 text-sm text-gray-700">
-								+44 7828 068290
-              </p>
-            </div>
-          </div>
+					
+						<a href="tel:+447828068290" className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
+								<div className="relative flex h-12 w-12 flex-none items-center justify-center">
+									<CallOut className="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-dmGreen" />
+								</div>
+								<div className="ml-8 lg:w-64">
+										<p className="text-base font-semibold text-gray-900">
+											<span className="absolute inset-0 sm:rounded-2xl" />
+											Call
+										</p>
+										<p className="mt-1 text-sm text-gray-700">
+											+44 7828 068290
+										</p>
+								</div>
+						</a>
+					
         </div>
         <div className="flex flex-col items-center border-t border-gray-200 pb-12 pt-8 md:flex-row-reverse md:justify-between md:pt-6">
           {/* <form className="flex w-full justify-center md:w-auto"> */}

@@ -1,4 +1,5 @@
-import { Sumana } from 'next/font/google'
+import { Sumana, Trirong, Noto_Serif } from 'next/font/google'
+
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -8,6 +9,18 @@ const sumana = Sumana({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-sumana',
+})
+const trirong = Trirong({
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-trirong',
+})
+const notoSerif = Noto_Serif({
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-noto-serif',
 })
 
 export const metadata = {
@@ -23,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={clsx('h-full bg-gray-50 antialiased', sumana.variable)}
+      className={clsx('h-full scroll-smooth bg-gray-50 antialiased', notoSerif.variable)}
     >
       <body className="flex h-full flex-col">
         <div className="flex min-h-full flex-col">{children}</div>

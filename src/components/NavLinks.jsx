@@ -7,15 +7,29 @@ import { AnimatePresence, motion } from 'framer-motion'
 export function NavLinks() {
   let [hoveredIndex, setHoveredIndex] = useState(null)
 
+	const handleAnchor = (event, href) => {
+	// 	event.preventDefault();
+	// 	if(pathname === "/"){
+			if (href.includes("#")) {
+				event.preventDefault();
+				window.location.hash = ''
+				window.location.hash = href
+			}
+		// }else{
+		// 	router.push(`../${href}`)
+		// }
+	}
+
   return [
-    ['Services', '/#services'],
-		['About', '/#about'],
-    ['Reviews', '/#reviews'],
-    ['Contact', '/#contact'],
+    ['Services', '#services'],
+		['About', '#about'],
+    ['Reviews', '#reviews'],
+    ['Contact', '#contact'],
   ].map(([label, href], index) => (
     <Link
       key={label}
       href={href}
+			onClick={(e) => handleAnchor(e, href)}
       className="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
       onMouseEnter={() => setHoveredIndex(index)}
       onMouseLeave={() => setHoveredIndex(null)}

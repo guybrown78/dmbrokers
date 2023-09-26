@@ -47,7 +47,7 @@ module.exports = {
 				'dmGreen-lighter': '#7EC2B4',
       }),
       fontFamily: {
-        sans: 'var(--font-sumana)',
+        sans: 'var(--font-noto-serif)',
       },
       keyframes: {
         'fade-in': {
