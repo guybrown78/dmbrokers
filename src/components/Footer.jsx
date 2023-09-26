@@ -73,31 +73,23 @@ export function Footer() {
 						</a>
 					
         </div>
-        <div className="flex flex-col items-center border-t border-gray-200 pb-12 pt-8 md:flex-row-reverse md:justify-between md:pt-6">
-          {/* <form className="flex w-full justify-center md:w-auto"> */}
-            {/* <TextField
-              type="email"
-              aria-label="Email address"
-              placeholder="Email address"
-              autoComplete="email"
-              required
-              className="w-60 min-w-0 shrink"
-            /> */}
-            <Button 
-							href="#message" 
-							onClick={(e) => handleAnchor(e, '#message')} 
-							color="gray" 
-							className="ml-4 flex-none"
-						>
-              <span className="hidden lg:inline">Message us</span>
-              <span className="lg:hidden">Message</span>
-            </Button>
-          {/* </form> */}
-          <p className="mt-6 text-sm text-gray-500 md:mt-0">
-            &copy; Copyright {new Date().getFullYear()}. All rights reserved.
-          </p>
-        </div>
+  
       </Container>
+
+			<div className="border-t border-gray-200/50 bg-dmDark">
+				<Container>
+					<div className="flex flex-col items-center py-12 lg:flex-row-reverse lg:justify-evenly">
+
+						<p className="mt-6 text-xs text-dmLight lg:mt-0 italic text-center lg:text-left">
+							M Wdowiarz T/As DM Brokers are an Appointed Representative of Movo Partnership Ltd who are directly authorised and regulated by the Financial Conduct Authority with registration number 823503. Registered Office: First Floor, 30 High Street, Chislehurst, BR7 5AS. Registered in England No: 11544238.
+						</p>
+						{/* <Logomark className="h-6 w-6 fill-dmLighter stroke-dmLighter" /> */}
+						<p className="flex-auto w-full lg:w-9/12 mt-6 text-sm text-dmLight lg:mt-0 text-center lg:text-left">
+							&copy; Copyright {new Date().getFullYear()}. All rights reserved.
+						</p>
+					</div>
+				</Container>
+			</div>
     </footer>
   )
 }
