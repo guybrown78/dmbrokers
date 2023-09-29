@@ -6,6 +6,8 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { HeroFrame } from '@/components/HeroFrame'
 import { HeroLoop } from '@/components/HeroLoop'
+import { HeroLoopProvider } from '@/libs/HeroLoopContext'
+import { HeroLoopTypography } from './HeroLoopTypography'
 
 
 function BackgroundIllustration(props) {
@@ -88,7 +90,9 @@ export function Hero() {
 			window.location.hash = href
 		}
 	}
+
   return (
+		<HeroLoopProvider>
     <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
@@ -124,8 +128,15 @@ export function Hero() {
               </HeroFrame> 
             </div>
           </div>
+					<div className="relative mt-4 h-24 lg:col-span-7 lg:mt-0 xl:col-span-6">
+						<div className='absolute w-full'>
+							<HeroLoopTypography />
+						</div>
+						
+          </div>
         </div>
       </Container>
     </div>
+		</HeroLoopProvider>
   )
 }

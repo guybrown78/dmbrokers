@@ -137,6 +137,9 @@ function Review({ title, body, author, rating, className, ...props }) {
         'animate-fade-in rounded-3xl bg-white p-6 opacity-0 shadow-md shadow-gray-900/5',
         className
       )}
+			// onAnimationEnd={() => {
+			// 	console.log("Review, animationEnd")
+			// }}
       style={{ animationDelay }}
       {...props}
     >
