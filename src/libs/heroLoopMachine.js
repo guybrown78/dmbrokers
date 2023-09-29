@@ -5,7 +5,7 @@ export const heroLoopMachine = createMachine(
     id: "trafficLight",
     initial: "green",
     context: {
-      timerDuration: 3000,
+      timerDuration: 4750,
     },
     states: {
       green: {
