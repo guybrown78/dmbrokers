@@ -26,6 +26,7 @@
     "xstate": "^4.38.2"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.14",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "prettier": "^2.8.7",
