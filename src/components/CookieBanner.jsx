@@ -36,7 +36,7 @@ export default function CookieBanner(){
 				<div className="pointer-events-auto mx-auto max-w-xl rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/10">
 					<p className="text-sm leading-6 text-gray-900">
 						We use cookies to enhance your browsing experience and analyse our traffic. By clicking <span className='font-semibold'>Accept All</span>, you consent to our use of cookies. See our{' '}
-						<Link href="/info/cookies" className="font-semibold text-salvify-primary">cookie policy</Link>
+						<Link href="/info/cookie" className="font-semibold text-salvify-primary">cookie policy</Link>
 						.
 					</p>
 					<div className="mt-4 flex items-center gap-x-5">
