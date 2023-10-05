@@ -4,7 +4,7 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import clsx from 'clsx'
-
+import Airtable from "airtable";
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logomark } from '@/components/Logo'
@@ -62,7 +62,7 @@ export function Message() {
 		setIsError(false)
 		setIsLoading(true);
 
-		// var base = new Airtable({apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PERSONAL_ACCESS_TOKEN}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE);
+		var base = new Airtable({apiKey: process.env.NEXT_PUBLIC_AIRTABLE_PERSONAL_ACCESS_TOKEN}).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE);
 
 		const date = await formatDate()
 
@@ -70,43 +70,35 @@ export function Message() {
 				Name: event.target.name.value,
 				Email: event.target.email.value,
 				Phone: event.target.tel.value,
-				Service: serviceType,
+				Service: serviceType.toLocaleLowerCase(),
 				Company: event.target.company.value,
 				Message: event.target.message.value,
 				SentDate: date,
 		}
-		console.log("fields", fields)
-		setTimeout(() => {
-			setIsLoading(false);
-			setIsSuccess(true)
-		}, 750)
-		// base('WebsiteContactForm').create([
-		// 	{
-		// 		"fields": {
-		// 				Name: event.target.name.value,
-		// 				Email: event.target.email.value,
-		// 				Phone: event.target.phone.value,
-		// 				Service: serviceType,
-		//				Company: event.target.company.value
-		// 				Message: event.target.message.value,
-		// 				SentDate: date,
-		// 		}
-		// 	},
+		// console.log("fields", fields)
+		// setTimeout(() => {
+		// 	setIsLoading(false);
+		// 	setIsSuccess(true)
+		// }, 750)
+		base('DMBrokers').create([
+			{
+				"fields": { ...fields }
+			},
 
-		// ], function(err, records) {
-		// 	if (err) {
-		// 		console.error(err);
-		// 		setIsError(true)
-		// 		// setIsLoading(false);
+		], function(err, records) {
+			if (err) {
+				console.error(err);
+				setIsError(true)
+				// setIsLoading(false);
 
-		// 		return;
-		// 	}
-		// 	records.forEach(function (record) {
-		// 		console.log(record.getId());
-		// 		setIsSuccess(true);
-		// 		setIsLoading(false);
-		// 	});
-		// });
+				return;
+			}
+			records.forEach(function (record) {
+				console.log(record.getId());
+				setIsSuccess(true);
+				setIsLoading(false);
+			});
+		});
 		
   }
 
