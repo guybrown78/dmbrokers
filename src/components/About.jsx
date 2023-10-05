@@ -53,9 +53,9 @@ export function About() {
 						</div>
 					</div>
 					<div className="lg:pl-20">
-						<ul role="list">
+						{/* <ul role="list">
 							(TODO) social links ... 
-						</ul>
+						</ul> */}
 					</div>
 				</div>
 
