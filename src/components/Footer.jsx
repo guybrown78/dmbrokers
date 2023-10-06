@@ -55,6 +55,11 @@ export function Footer() {
             <nav className="mt-11 flex gap-8">
               <NavLinks />
             </nav>
+						<ul className='w-full text-xs flex space-x-5 mt-4 justify-apart items-center'>
+							<li><Link href="../info/privacy"className='underline'>Privacy Policy</Link></li>
+							<li><Link href="../info/cookie"className='underline'>Cookie Policy</Link></li>
+							<li><Link href="../info/terms"className='underline'>Terms and Conditions</Link></li>
+						</ul>
           </div>
 					
 						<a href="tel:+441606636201" className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
